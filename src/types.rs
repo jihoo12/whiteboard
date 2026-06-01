@@ -41,7 +41,7 @@ fn dist_sq_to_segment(p: Point, a: Point, b: Point) -> f64 {
     if len_sq == 0.0 {
         return (p.x-a.x).powi(2) + (p.y-a.y).powi(2);
     }
-    let t = ((p.x-a.x)*dx + (p.y-a.y)*dy / len_sq).clamp(0.0, 1.0);
+    let t = (((p.x-a.x)*dx + (p.y-a.y)*dy) / len_sq).clamp(0.0, 1.0);
     (a.x + t*dx - p.x).powi(2) + (a.y + t*dy - p.y).powi(2)
 }
 
