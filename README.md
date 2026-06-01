@@ -5,11 +5,15 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     gtk4
     pkg-config
-    libadwaita.dev
+    libadwaita       
     meson
     desktop-file-utils
-    pkgs.gnumake
-    
+    gnumake         
+    cargo
+    rustc
+    rustfmt
+    clippy
+    rust-analyzer
   ];
 }
 ```
